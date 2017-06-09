@@ -5,15 +5,24 @@
     <title>Hello World!</title>
   </head>
   <body>
-    <h1>Hello World!</h1>
-    <!-- All of the Node.js APIs are available in this renderer process. -->
-    We are using Node.js <script>document.write(process.versions.node)</script>,
-    Chromium <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
+    <div class="rotating"></div>
   </body>
 
-  <script>
-    // You can also require other files to run in this process
-    require('./renderer.js')
-  </script>
+  <style>
+    .rotating {
+      width: 200px;
+      height: 200px;
+      background-color: green;
+      animation: rotating-function 1.25s linear infinite;
+    }
+    
+    @keyframes rotating-function {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
 </html>

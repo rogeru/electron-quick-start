@@ -4,6 +4,7 @@
   "description": "A minimal Electron application",
   "main": "main.js",
   "scripts": {
+    "postinstall": "$(npm bin)/electron-rebuild -f",
     "start": "electron ."
   },
   "repository": "https://github.com/electron/electron-quick-start",
@@ -17,6 +18,10 @@
   "author": "GitHub",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "~1.6.2"
+    "electron": "~1.6.2",
+    "electron-rebuild": "^1.5.11"
+  },
+  "dependencies": {
+    "sleep": "^5.1.1"
   }
 }

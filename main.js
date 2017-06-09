@@ -6,6 +6,7 @@ const BrowserWindow = electron.BrowserWindow
 
 const path = require('path')
 const url = require('url')
+const sleep = require('sleep')
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -21,6 +22,11 @@ function createWindow () {
     protocol: 'file:',
     slashes: true
   }))
+  
+  setInterval(function() {
+    console.log('sleeping for 400ms')
+    sleep.msleep(100)
+  }, 1000);
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
